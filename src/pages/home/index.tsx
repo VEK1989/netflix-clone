@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Navbar} from 'presentation/sections/navbar';
+import {Navbar} from 'src/presentation/sections/navbar';
 
 import style from './home.module.scss';
 

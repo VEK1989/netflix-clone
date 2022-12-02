@@ -1,5 +1,5 @@
-import {truncate} from 'src/helpers/truncate';
 import React from 'react';
+import {truncate} from 'src/helpers/truncate';
 
 import style from './banner.module.scss';
 

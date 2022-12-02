@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {useToggle} from 'src/hooks/use_toggle';
 
 import style from './navbar.module.scss';
@@ -7,7 +7,7 @@ import style from './navbar.module.scss';
 export const Navbar = () => {
   const [isShow, setIsShow] = useToggle(false);
 
-  const transitionNavbar = () => {
+  const transitionNavbar = useCallback(() => {
     // Управляем видимостью заднего фона навбара при скролле.
     if (window.scrollY > 100) {
       setIsShow(true);
@@ -16,7 +16,7 @@ export const Navbar = () => {
     }
 
     setIsShow(false);
-  };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', transitionNavbar);

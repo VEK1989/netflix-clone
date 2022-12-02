@@ -23,6 +23,7 @@ export const Navbar = () => {
 
     return window.removeEventListener('scroll', transitionNavbar);
   }, []);
+
   return (
     <header className={cn(style.nav, isShow && style.nav__black)}>
       <div className={style.nav__content}>

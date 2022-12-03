@@ -22,7 +22,7 @@ export const Navbar = () => {
     window.addEventListener('scroll', transitionNavbar);
 
     return window.removeEventListener('scroll', transitionNavbar);
-  }, [transitionNavbar]);
+  }, []);
 
   return (
     <header className={cn(style.nav, isShow && style.nav__black)}>
